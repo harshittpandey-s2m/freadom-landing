@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: "Rubik";
+  --xlg-font-size: 18px;
+  --lg-font-size: 16px;
+  --md-font-size: 14px;
+  --sm-font-size: 13px;
+  --xsm-font-size: 12px;
+  --xxsm: 11px;
+
+  background-color:#462c5b;}
+
+a {
+  text-decoration:none;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.parallax-outer {
+    width: 40%;
+}
+
+ .parallax-inner {
+     width:100%;overflow:hidden;     max-width:100%;
+ }
+
+@media screen and (max-width:768px)
+{   .parallax-outer {width:100%;}
+}
