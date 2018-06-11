@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {
     QuestionDescription,
-    QuestionItemHeader, QuestionListContainer, QuestionListItem,QuestionListedContainer,
-    QuestionPanelContainer
+    QuestionItemHeader, QuestionListContainer, QuestionListItem, QuestionListedContainer,
+    QuestionPanelContainer, ReadMoreButton
 } from './QuestionPanelList.styled';
-import {Heading} from "static/styled/custom.styled";
+import {Heading,ThemeButton} from "static/styled/custom.styled";
 import {SubHeading} from "../../../static/styled/custom.styled";
 
 export default class QuestionPanelList extends Component
@@ -15,6 +15,14 @@ export default class QuestionPanelList extends Component
         super();
         this.state=({
             selectedIndex:-1,
+            enableReadMore:false,
+        })
+    }
+
+
+    handleReadMoreBtn=()=>{
+        this.setState({
+            enableReadMore:!this.state.enableReadMore,
         })
     }
 
@@ -83,7 +91,8 @@ export default class QuestionPanelList extends Component
               <Heading fontSize="30px">
                   People frequently ask
               </Heading>
-              <QuestionListContainer>
+              {!this.state.enableReadMore && <ReadMoreButton primary onClick={this.handleReadMoreBtn} > Read More </ReadMoreButton>}
+              <QuestionListContainer active={this.state.enableReadMore}>
                   <QuestionListItem style={{borderBottom:'1px solid rgba(0,0,0,0.3)'}} >
                       <QuestionItemHeader onClick={()=>this.handleSelectedIndex(1)} active={this.state.selectedIndex===1}>
                           <SubHeading primary fontSize="18px">

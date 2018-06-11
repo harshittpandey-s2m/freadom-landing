@@ -25,9 +25,27 @@ export const FreadomBodyContainer=styled.div`
   
         `;
 export const FreadomTopContainer=FreadomBodyContainer.extend`
-
-    background-image:url(${freadomimage})
    
+    background-image:url(${freadomimage});
+   @media (max-width:567px)
+   {
+   background: linear-gradient(to bottom, rgba(20,9,33,1) 0%, rgba(20,9,33,1) 8%, rgba(20,9,33,1) 14%, rgba(20,9,33,1) 24%, rgba(24,10,38,1) 30%, rgba(41,16,58,1) 57%, rgba(41,16,58,1) 71%);
+   background-image: url(${freadomimage});
+   background-size: contain;
+    background-position: 100% calc(100% - 40px);
+    background-repeat:no-repeat;
+    }
+    
+     @media (max-width:425px)
+   {
+   background-size: contain;
+    background-position: 100% calc(100% - 100px);
+    }
+     @media (max-width:320px)
+   {
+   background-size: contain;
+    background-position: 100% calc(100% - 100px);
+    }
 `;
 
 export const FreadomMiddleContainer=FreadomBodyContainer.extend`

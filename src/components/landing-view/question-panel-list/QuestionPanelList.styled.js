@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {ThemeButton} from "static/styled/custom.styled"
 export const QuestionPanelContainer=styled.div`
 
 padding:30px 40px;
@@ -23,11 +23,19 @@ export const QuestionListedContainer=styled.ul`
    }
    `;
 
+export const ReadMoreButton=ThemeButton.extend`
+   display:flex;
+   justify-content:flex-start;
+   `;
+
 export const QuestionListContainer=styled.div`
      display:flex;
      justify-content:space-between;
      align-items:center;
-     margin-top:14px;
+     padding-top:14px;
+    transition: all 0.3s ease-in-out;
+  transform: ${props=>props.active?"scaleY(0)":"scaleY(1)"};
+  height: ${props=>props.active?'100%':'0'};
      flex-flow:column nowrap;
       overflow:hidden;
      `;

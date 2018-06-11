@@ -27,6 +27,10 @@ width:20%
    @media (max-width: 567px) {
    
    width:100%;
+   display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

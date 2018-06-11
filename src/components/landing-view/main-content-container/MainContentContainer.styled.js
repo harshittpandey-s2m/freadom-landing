@@ -6,6 +6,9 @@ export const DisplayViewContainer=styled.div`
  display:flex;
  justify-content:center;
  height:700px;
+ @media (max-width:567px)
+ {
+ height:500px;}
 `;
 export const ContentContainer=styled.div`
    width:50%;
@@ -19,6 +22,12 @@ export const ContentContainer=styled.div`
  @media (max-width: 768px) {
     width:80%;
   }
+   @media (max-width: 567px) {
+    width:60%;
+  }
+   @media (max-width: 425px) {
+    width:100%;
+  }
 `;
 
 
@@ -28,10 +37,21 @@ line-height: 1.1;
   text-align: center;
 font-weight:500;
 width:100%;
+@media (max-width:1024px)
+{
+font-size:28px;
+}
+
+@media (max-width:1024px)
+{
+font-size:32px;
+}
 @media (max-width:567px)
 {
-font-size:30px;
+font-size:20px;
 margin-top:24px;
+line-height: 1.3;
+  letter-spacing: -0.7px;
 }
 `;
 
@@ -41,6 +61,15 @@ export const SubContentHeading=Heading.extend`
   font-size: 18px;
   font-weight: normal;
   text-align: center;
-  color: #8e779e;`;
+  color: #8e779e;
+  
+  @media (max-width:567px)
+  {
+  font-size:16px;
+  margin-top:20px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  }
+  ;`
 
 

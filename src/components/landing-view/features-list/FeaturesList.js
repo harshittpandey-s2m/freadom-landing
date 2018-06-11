@@ -8,6 +8,31 @@ import {ImageContainer} from "static/styled/custom.styled";
 import { Parallax } from 'react-scroll-parallax';
 export default class FeaturesList extends Component
 {
+    getOffsetMin=()=>{
+        let windowSize=window.outerWidth;
+        if(windowSize>1024)
+            return -45;
+        else if(windowSize>767)
+            return -40;
+        else if(windowSize>567)
+            return -30;
+        else
+            return 0;
+
+    }
+
+    getOffsetMax=()=>{
+        let windowSize=window.outerWidth;
+        if(windowSize>1024)
+            return 45;
+        else if(windowSize>767)
+            return 40;
+        else if(windowSize>567)
+            return 30;
+        else
+            return 0;
+
+    }
     render(){
 
         let featureList=[
@@ -58,7 +83,7 @@ export default class FeaturesList extends Component
                 <FeatureListContainer>
                     {featureList.map((feature,index)=>(index%2===0?
                         <FeatureItem key={index} style={{position:'relative'}}>
-                            <Parallax offsetYMax={40} offsetYMin={-50}>
+                            <Parallax offsetYMax={window.outerWidth>567?40:0} offsetYMin={window.outerWidth>567?-40:0}>
                         <FeatureItemLeftContainer>
                               <FeatureBackgroundImage src={require("static/img/"+feature.backgroundImage+".png")} alt="background"/>
                             <FeatureHeadingContainer>
@@ -81,7 +106,7 @@ export default class FeaturesList extends Component
                                 <FeatureItemImageContainer src={require("static/img/"+feature.mobImage+".png")} height="300"/>
                             </FeatureItemRightContainer>
 
-                            <Parallax offsetYMax={45} offsetYMin={-45} style={{width:'46%'}}>
+                            <Parallax offsetYMax={window.outerWidth>567?40:0} offsetYMin={window.outerWidth>567?-40:0} style={{width:'46%'}}>
                                 <FeatureItemLeftContainer>
                                     <FeatureBackgroundImage src={require("static/img/"+feature.backgroundImage+".png")} alt="background"/>
                                     <FeatureHeadingContainer>

@@ -24,7 +24,7 @@ export const HeaderLeftContainer=styled.div`
       }
       @media (max-width:567px)
       {
-      width:140px;
+      width:180px;
       margin-left:0px;
       }
       
@@ -41,8 +41,9 @@ export const HeaderRightContainer=styled.div`
      `;
 
 export const HeaderThemeButton=ThemeButton.extend`
- @media (max-width:442px)
+ @media (max-width:567px)
  {
+ display:none;
  padding:6px 10px;
  }`;
 

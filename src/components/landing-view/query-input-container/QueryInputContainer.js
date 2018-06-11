@@ -89,10 +89,7 @@ export default class QueryInputContainer extends Component
         }
     };
 
-    componentDidMount()
-    {
-        console.log(window.outerWidth);
-    }
+
     render(){
 
         return(
@@ -112,21 +109,21 @@ export default class QueryInputContainer extends Component
 
               </QueryRightContainer>
                   </QueryOptionItem>
-                  {/*<span/>*/}
-                  {/*<QueryOptionItem>*/}
-                  {/*<QueryLabelContainer>*/}
-                      {/*<div>Download our app via SMS</div>*/}
-                  {/*</QueryLabelContainer>*/}
-                  {/*<QueryRightContainer>*/}
-                      {/*<EmailInputContainer>*/}
-                          {/*<input type="text" placeholder="Enter your mobile number here" onKeyPress={this.handlePhoneBtn}/>*/}
-                           {/*<QueryThemeButton primary>*/}
-                               {/*Give me the link*/}
-                           {/*</QueryThemeButton>*/}
-                      {/*</EmailInputContainer>*/}
+                  <span/>
+                  <QueryOptionItem>
+                  <QueryLabelContainer>
+                      <div>Download our app via SMS</div>
+                  </QueryLabelContainer>
+                  <QueryRightContainer>
+                      <EmailInputContainer>
+                          <input type="text" placeholder="Enter your mobile number here" onKeyPress={this.handlePhoneBtn}/>
+                           <QueryThemeButton primary>
+                               Give me the link
+                           </QueryThemeButton>
+                      </EmailInputContainer>
 
-                  {/*</QueryRightContainer>*/}
-                  {/*</QueryOptionItem>*/}
+                  </QueryRightContainer>
+                  </QueryOptionItem>
               </QueryOptionsParentContainer>
 
           </QueryInputParentContainer>

@@ -3,9 +3,9 @@ import {ThemeButton} from "static/styled/custom.styled";
 
 
 export const QueryOptionItem=styled.div`
-width:56%;
+width:46%;
 
-@media (max-width:1024px)
+@media (max-width:767px)
 {
 width:100%;
 margin-top:36px;
@@ -24,7 +24,7 @@ export const QueryOptionsParentContainer=styled.div`
    height:113px;
    border-right:1px solid rgba(151,151,151,0.3);
    }
-   @media (max-width:1024px)
+   @media (max-width:767px)
    {
    span
    {
@@ -151,6 +151,6 @@ height:38px;
 padding:0;
 width:200px;
 margin-right:14px;
-font-size:16px;`;
+font-size:14px;`;
 
 
