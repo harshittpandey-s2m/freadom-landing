@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88fca657-b2d3-4b78-97a1-aa3f49c37477" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/LandingView.styled.js" afterPath="$PROJECT_DIR$/src/components/landing-view/LandingView.styled.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/features-list/FeaturesList.js" afterPath="$PROJECT_DIR$/src/components/landing-view/features-list/FeaturesList.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/header/Header.styled.js" afterPath="$PROJECT_DIR$/src/components/landing-view/header/Header.styled.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/main-content-container/MainContentContainer.styled.js" afterPath="$PROJECT_DIR$/src/components/landing-view/main-content-container/MainContentContainer.styled.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/query-input-container/QueryInputContainer.js" afterPath="$PROJECT_DIR$/src/components/landing-view/query-input-container/QueryInputContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/query-input-container/QueryInputContainer.styled.js" afterPath="$PROJECT_DIR$/src/components/landing-view/query-input-container/QueryInputContainer.styled.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/question-panel-list/QuestionPanelList.js" afterPath="$PROJECT_DIR$/src/components/landing-view/question-panel-list/QuestionPanelList.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/question-panel-list/QuestionPanelList.styled.js" afterPath="$PROJECT_DIR$/src/components/landing-view/question-panel-list/QuestionPanelList.styled.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing-view/reading-features-list/ReadingFeaturesList.styled.js" afterPath="$PROJECT_DIR$/src/components/landing-view/reading-features-list/ReadingFeaturesList.styled.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -285,16 +275,15 @@
       <workItem from="1528354046803" duration="25321000" />
       <workItem from="1528439294836" duration="448000" />
       <workItem from="1528695572974" duration="131000" />
-      <workItem from="1528696346949" duration="6410000" />
+      <workItem from="1528696346949" duration="6904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123903000" />
+    <option name="totallyTimeSpent" value="124397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24386618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -305,7 +294,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="CodeSearch" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07394958" sideWeight="0.49739778" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.70756304" sideWeight="0.49739778" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
