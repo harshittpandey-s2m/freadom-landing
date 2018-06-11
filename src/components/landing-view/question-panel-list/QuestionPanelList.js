@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {
     QuestionDescription,
     QuestionItemHeader, QuestionListContainer, QuestionListItem, QuestionListedContainer,
-    QuestionPanelContainer, ReadMoreButton
+    QuestionPanelContainer, ReadMoreButton, QuestionSubHeading
 } from './QuestionPanelList.styled';
-import {Heading,ThemeButton} from "static/styled/custom.styled";
-import {SubHeading} from "../../../static/styled/custom.styled";
+import {Heading,ThemeButton, SubHeading} from "static/styled/custom.styled";
+
 
 export default class QuestionPanelList extends Component
 {
@@ -71,35 +71,22 @@ export default class QuestionPanelList extends Component
                 answer:'',
             },
         ];
-        // let questionList=questionListData.map((question,index)=>
-        //      <QuestionListItem style={index!==questionListData.length-1?{borderBottom:'1px solid rgba(0,0,0,0.3)'}:{}} key={index}>
-        //          <QuestionItemHeader onClick={()=>this.handleSelectedIndex(index)} active={this.state.selectedIndex===index}>
-        //          <SubHeading primary fontSize="18px">
-        //              {question.question}
-        //          </SubHeading>
-        //              <i className="fa fa-angle-down"/>
-        //          </QuestionItemHeader>
-        //          <QuestionDescription active={this.state.selectedIndex===index}>
-        //              {question.answer.split("\n").map((level,index)=>{
-        //                  return <div key={index}>{level} </div>;
-        //              })}
-        //          </QuestionDescription>
-        //      </QuestionListItem>
-        // );
+
         return(
           <QuestionPanelContainer>
-              <Heading fontSize="30px">
+              <Heading fontSize="24px">
                   People frequently ask
               </Heading>
-              {!this.state.enableReadMore && <ReadMoreButton primary onClick={this.handleReadMoreBtn} > Read More </ReadMoreButton>}
-              <QuestionListContainer active={this.state.enableReadMore}>
-                  <QuestionListItem style={{borderBottom:'1px solid rgba(0,0,0,0.3)'}} >
+
+              <QuestionListContainer >
+                  <QuestionListItem style={window.outerWidth>567?{borderBottom:'1px solid rgba(0,0,0,0.3)'}:{}} >
                       <QuestionItemHeader onClick={()=>this.handleSelectedIndex(1)} active={this.state.selectedIndex===1}>
-                          <SubHeading primary fontSize="18px">
+                          <QuestionSubHeading primary fontSize="18px">
                               Why do I need Freadom? What is the advantage of using it?
-                          </SubHeading>
+                          </QuestionSubHeading>
                           <i className="fa fa-angle-down"/>
                       </QuestionItemHeader>
+
                       <QuestionDescription active={this.state.selectedIndex===1}>
                           <div>For ‘YOU’, the parent, we have developed a unique mobile app, called FREADOM, which can be downloaded from the iPhone app store or the Android play store. It is an app designed to help you raise a happy reader at home. On the App, you can:</div>
                           <div> READ STORIES: Curated feed of stories based on child’s reading level and interest powered by a recommendation engine </div>
@@ -112,12 +99,12 @@ export default class QuestionPanelList extends Component
 
                       </QuestionDescription>
                   </QuestionListItem>
-
+                  {window.outerWidth<=567?<ReadMoreButton primary onClick={this.handleReadMoreBtn} > Read More </ReadMoreButton>:<div>
                   <QuestionListItem style={{borderBottom:'1px solid rgba(0,0,0,0.3)'}} >
                       <QuestionItemHeader onClick={()=>this.handleSelectedIndex(2)} active={this.state.selectedIndex===2}>
-                          <SubHeading primary fontSize="18px">
+                          <QuestionSubHeading primary fontSize="18px">
                               How can I Install Freadom?
-                          </SubHeading>
+                          </QuestionSubHeading>
                           <i className="fa fa-angle-down"/>
                       </QuestionItemHeader>
                       <QuestionDescription active={this.state.selectedIndex===2}>
@@ -140,9 +127,9 @@ export default class QuestionPanelList extends Component
 
                   <QuestionListItem style={{borderBottom:'1px solid rgba(0,0,0,0.3)'}} >
                       <QuestionItemHeader onClick={()=>this.handleSelectedIndex(3)} active={this.state.selectedIndex===3}>
-                          <SubHeading primary fontSize="18px">
+                          <QuestionSubHeading primary fontSize="18px">
                               What is WOW code?
-                          </SubHeading>
+                          </QuestionSubHeading>
                           <i className="fa fa-angle-down"/>
                       </QuestionItemHeader>
                       <QuestionDescription active={this.state.selectedIndex===3}>
@@ -153,9 +140,9 @@ export default class QuestionPanelList extends Component
 
                   <QuestionListItem style={{borderBottom:'1px solid rgba(0,0,0,0.3)'}} >
                       <QuestionItemHeader onClick={()=>this.handleSelectedIndex(4)} active={this.state.selectedIndex===4}>
-                          <SubHeading primary fontSize="18px">
+                          <QuestionSubHeading primary fontSize="18px">
                               How do I link the 'WOW Code'?
-                          </SubHeading>
+                          </QuestionSubHeading>
                           <i className="fa fa-angle-down"/>
                       </QuestionItemHeader>
                       <QuestionDescription active={this.state.selectedIndex===4}>
@@ -312,7 +299,7 @@ export default class QuestionPanelList extends Component
                               After completing any activity, there is a button that pops to share experience your via photo, video, audio & text. Please choose the best option and it would be published and shared with other parents and children on Freadom.
                           </div>
                       </QuestionDescription>
-                  </QuestionListItem>
+                  </QuestionListItem> </div>}
 
 
 

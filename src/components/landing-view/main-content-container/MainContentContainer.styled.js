@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {Heading} from"static/styled/custom.styled";
+import {Heading, ThemeButton} from"static/styled/custom.styled";
+
 
 export const DisplayViewContainer=styled.div`
  
@@ -19,10 +20,8 @@ export const ContentContainer=styled.div`
  flex-flow:column nowrap;
  
  
- @media (max-width: 768px) {
-    width:80%;
-  }
-   @media (max-width: 567px) {
+ 
+   @media (max-width: 767px) {
     width:60%;
   }
    @media (max-width: 425px) {
@@ -30,6 +29,17 @@ export const ContentContainer=styled.div`
   }
 `;
 
+export const DownloadButtonContainer=styled.div`
+display:none;
+@media (max-width:567px)
+{
+margin-top:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+`;
 
 export const MainHeading=Heading.extend`
 line-height: 1.1;
@@ -49,6 +59,7 @@ font-size:32px;
 @media (max-width:567px)
 {
 font-size:20px;
+font-weight: normal;
 margin-top:24px;
 line-height: 1.3;
   letter-spacing: -0.7px;

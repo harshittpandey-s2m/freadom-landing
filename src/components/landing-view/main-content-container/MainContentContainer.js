@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {
-     ContentContainer, DisplayViewContainer, MainHeading,
+    ContentContainer, DisplayViewContainer, DownloadButtonContainer, MainHeading,
     SubContentHeading
 } from './MainContentContainer.styled';
+import {ThemeButton} from "static/styled/custom.styled";
 
 export default class MainContentContainer extends Component
 {
@@ -16,6 +17,9 @@ export default class MainContentContainer extends Component
                 <SubContentHeading>
                     Spend 10 minutes with your child anywhere, anytime to nurture their will and skill to read.
                 </SubContentHeading>
+                <DownloadButtonContainer>
+                <ThemeButton primary> Download the App</ThemeButton>
+                </DownloadButtonContainer>
             </ContentContainer>
           </DisplayViewContainer>
         )

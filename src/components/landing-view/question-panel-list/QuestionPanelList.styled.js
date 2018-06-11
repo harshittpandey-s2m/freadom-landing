@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ThemeButton} from "static/styled/custom.styled"
+import {ThemeButton, SubHeading} from "static/styled/custom.styled"
 export const QuestionPanelContainer=styled.div`
 
 padding:30px 40px;
@@ -24,8 +24,16 @@ export const QuestionListedContainer=styled.ul`
    `;
 
 export const ReadMoreButton=ThemeButton.extend`
+display:none;
+  @media (max-width:567px)
+  {
+  
+   width:180px;
    display:flex;
-   justify-content:flex-start;
+   font-weight:500;
+   font-size:16px;
+   text-align:center;
+   justify-content:center;}
    `;
 
 export const QuestionListContainer=styled.div`
@@ -33,9 +41,9 @@ export const QuestionListContainer=styled.div`
      justify-content:space-between;
      align-items:center;
      padding-top:14px;
-    transition: all 0.3s ease-in-out;
-  transform: ${props=>props.active?"scaleY(0)":"scaleY(1)"};
-  height: ${props=>props.active?'100%':'0'};
+  //   transition: all 0.3s ease-in-out;
+  // transform: ${props=>props.active?"scaleY(0)":"scaleY(1)"};
+  // height: ${props=>props.active?'100%':'0'};
      flex-flow:column nowrap;
       overflow:hidden;
      `;
@@ -85,5 +93,13 @@ color: #606191;
   transform: ${props=>props.active?"transformY(100%)":"transformY(0)"};
   height: ${props=>props.active?'100%':'0'};
  `;
+
+export const QuestionSubHeading=SubHeading.extend`
+   @media (max-width:450px)
+   {
+   
+   font-size:15px;
+   }
+   `;
 
 

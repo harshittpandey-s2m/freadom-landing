@@ -151,6 +151,8 @@ height:38px;
 padding:0;
 width:200px;
 margin-right:14px;
-font-size:14px;`;
+font-size:14px;
+
+`;
 
 

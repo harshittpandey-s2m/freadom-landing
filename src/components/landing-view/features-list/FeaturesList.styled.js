@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {ImageContainer} from "static/styled/custom.styled";
+import {ImageContainer,ImageParentContainer} from "static/styled/custom.styled";
 
 export const FeatureListParentContainer=styled.div`
     background-color:#f3f2f7;
@@ -12,39 +12,48 @@ padding:40px 120px;
 @media (max-width:1024px)
 {
    padding:40px 80px;
-   margin-top:-100px;
+   padding-top:0;
+   margin-top:-120px;
 }
 
 @media (max-width:767px)
 {
    padding:40px 60px;
-}
+    padding-top: 0px;
+    margin-bottom:60px;
+    padding-top: 60px;}
 
 @media (max-width:567px)
 {
-  margin-top:-120px;
+  
   padding:28px;
+  padding-top: 120px;
   }
 `;
 
 export const FeatureItem=styled.div`
 width:100%;
 display:flex;
-padding-bottom:60px;
-flex-flow:row wrap;
+flex-flow:${props=>props.active?"row wrap":"row-reverse wrap"};
 align-items:center;
 justify-content:space-between;
- @media (max-width: 768px) {
-  
-   padding-bottom:0px;
+ @media (max-width: 767px) {
+ 
+  justify-content:flex-start;
+  margin-bottom:240px;
+   flex-flow:column-reverse nowrap;
    
   }
+   @media (max-width: 567px) 
+   {
+   margin-bottom:140px;
+   }
        `;
 
 export const FeatureItemDataContainer=styled.div`
    width:${props=>props.primary?'46%':'35%'};
    
-   @media (max-width: 768px) {
+   @media (max-width: 567px) {
    margin:40px 0px;
    width:100%; 
   }
@@ -53,11 +62,15 @@ export const FeatureItemDataContainer=styled.div`
 export const FeatureItemRightContainer=FeatureItemDataContainer.extend`
     width:50%;
   
+  @media (max-width:767px)
+  {
+  width:100%;
+  margin:0;
+  margin:-60px 0;}
   
-    @media (max-width: 768px) {
-     margin:30px 0;
-   width:100%; 
-  }
+  
+  
+   
     
     `;
 
@@ -67,10 +80,14 @@ export const FeatureItemImageContainer=styled.img`
    object-fit:contain;
      object-position:center;
   max-width:100%;
-   @media (max-width: 768px) {
-     height:340px;
-    
-   width:100%; 
+  
+      @media (max-width: 767px) {
+     margin:0;
+     padding:0;
+     display:none;
+     height:0;
+     
+   }
    
   }
     `;
@@ -91,17 +108,19 @@ padding:40px 40px 0px;
   box-shadow: 0 12px 24px 0 rgba(191, 111, 47, 0.21);
   @media (max-width:1024px)
   {
-    padding: 40px;
+    padding: 30px;
     padding-bottom: 0px;
     }
-    @media (max-width:768px)
+    @media (max-width:767px)
   {
   width:auto;
+  height:280px;
+   margin-top:${props=>props.primary?'-220px':'0'}
   }
   @media (max-width:567px)
   {
   padding:30px;
-  height:150px;
+  height:200px;
  }
 
   `;
@@ -117,7 +136,7 @@ export const FeatureBackgroundImage=ImageContainer.extend`
 export const FeatureHeadingContainer=styled.p`
      
      width:180px;
-     font-size: 28px;
+     font-size: 22px;
      display:block;
      text-align:left;
   font-weight: 500;
@@ -136,18 +155,68 @@ export const FeatureHeadingContainer=styled.p`
   
   @media (max-width:767px)
   {
-  width:200px;}
+  display:flex;
+  margin-top:100px;
+   margin-bottom:10px;
+  align-items:center;
+  flex-flow:column nowrap;
+  font-size:20px;
+  line-height: 1.56;
+  letter-spacing: -0.5px;
+  width:100%;
+  img
+  {
+  width:26px;
+  height:26px;
+  margin-bottom:10px;
+  
   }
- 
+  }
+  @media (max-width:567px)
+  {
+  text-align:center;
+   margin-top:60px;
+  }
   
   `;
 export const FeatureDescription=styled.div`
 text-align:left;
 color:white;
 font-size:18px;
-@media (max-width:567px) {
+@media (max-width:1023px) {
     font-size:16px;
 }
 
+@media (max-width:450px) {
+    font-size:14px}
+
   `;
+
+export const FeatureMobViewImageContainer=ImageParentContainer.extend`
+display:none;
+@media (max-width:767px)
+{
+
+z-index:100;
+position:relative;
+display:flex;
+width:80%;
+align-items:center;
+justify-content:center;
+width:100%;
+
+img
+{
+width:80%;}
+  }
+  
+  @media (max-width:450px)
+  {
+   height:220px;}
+   
+    @media (max-width:375px)
+  {
+   height:160px;}
+  `;
+
 

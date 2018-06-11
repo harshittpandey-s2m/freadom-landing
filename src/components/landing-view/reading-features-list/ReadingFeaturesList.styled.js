@@ -56,4 +56,8 @@ export const ReadingDescription=styled.div`
     span
     {
     color:#fa8724;
+    }
+    
+    @media (max-width:567px) {
+    text-align:center;
     }`;

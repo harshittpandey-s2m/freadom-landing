@@ -29,8 +29,7 @@ export const FreadomTopContainer=FreadomBodyContainer.extend`
     background-image:url(${freadomimage});
    @media (max-width:567px)
    {
-   background: linear-gradient(to bottom, rgba(20,9,33,1) 0%, rgba(20,9,33,1) 8%, rgba(20,9,33,1) 14%, rgba(20,9,33,1) 24%, rgba(24,10,38,1) 30%, rgba(41,16,58,1) 57%, rgba(41,16,58,1) 71%);
-   background-image: url(${freadomimage});
+   background-image:url(${freadomimage}), radial-gradient(circle at 3% 1%, #462c5b, #29103a 68%, #140921);
    background-size: contain;
     background-position: 100% calc(100% - 40px);
     background-repeat:no-repeat;

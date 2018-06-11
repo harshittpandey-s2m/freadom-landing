@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import {
     FeatureBackgroundImage, FeatureHeadingContainer, FeatureDescription,
     FeatureItem, FeatureItemDataContainer, FeatureItemLeftContainer, FeatureListContainer,
-    FeatureListParentContainer, FeatureItemRightContainer, FeatureItemImageContainer
+    FeatureListParentContainer, FeatureItemRightContainer, FeatureItemImageContainer, FeatureMobViewImageContainer
 } from "./FeaturesList.styled";
 import {ImageContainer} from "static/styled/custom.styled";
 import { Parallax } from 'react-scroll-parallax';
+import {ImageParentContainer} from "../../../static/styled/custom.styled";
 export default class FeaturesList extends Component
 {
     getOffsetMin=()=>{
@@ -42,6 +43,7 @@ export default class FeaturesList extends Component
                backgroundImage:'open-book-trans',
                image:'open-book-white',
                 mobImage:'mob-stories',
+                mobViewImage:'stories-mob-view'
             },
             {
                 name:'LOG YOUR READINGS',
@@ -49,15 +51,15 @@ export default class FeaturesList extends Component
                 backgroundImage:'log-reading-trans',
                 image:'log-reading-white',
                 mobImage:"mob-reading",
+                mobViewImage:'reading-mob-view'
             },
             {
                 name:'DO ACTIVITIES',
-                description:'10 minutes activity packs & monthly reading challenges sorted by interests and mood'
-
-                ,
+                description:'10 minutes activity packs & monthly reading challenges sorted by interests and mood',
                 backgroundImage:'do-activity-trans',
                 image:'do-activity-white',
                 mobImage:"mob-stories",
+                mobViewImage:'act-mob-view',
             },
             {
                 name:'NEWS FREADS',
@@ -65,6 +67,7 @@ export default class FeaturesList extends Component
                 backgroundImage:'log-reading-trans',
                 image:'fread-white',
                 mobImage:"mob-news",
+                mobViewImage:'freads-mob-view'
             },
             {
                 name:'COMPLETE CHALLENGES',
@@ -72,6 +75,7 @@ export default class FeaturesList extends Component
                 backgroundImage:'do-activity-trans',
                 image:'tropy-white',
                 mobImage:"mob-challenges",
+                mobViewImage:'challenges-mob-view',
             },
 
         ];
@@ -81,10 +85,12 @@ export default class FeaturesList extends Component
           <FeatureListParentContainer>
 
                 <FeatureListContainer>
-                    {featureList.map((feature,index)=>(index%2===0?
-                        <FeatureItem key={index} style={{position:'relative'}}>
-                            <Parallax offsetYMax={window.outerWidth>567?40:0} offsetYMin={window.outerWidth>567?-40:0}>
+                    {featureList.map((feature,index)=>(
+                        <FeatureItem key={index} style={{position:'relative'}} active={index%2===0}>
+                            <Parallax offsetYMax={window.outerWidth>767?40:0} offsetYMin={window.outerWidth>767?-40:0}>
+
                         <FeatureItemLeftContainer>
+
                               <FeatureBackgroundImage src={require("static/img/"+feature.backgroundImage+".png")} alt="background"/>
                             <FeatureHeadingContainer>
                                 <img src={require("static/img/"+feature.image+".png")} alt="feature-left"/>
@@ -95,30 +101,14 @@ export default class FeaturesList extends Component
                             </FeatureDescription>
                         </FeatureItemLeftContainer>
                             </Parallax>
-                        <FeatureItemRightContainer>
+                        <FeatureItemRightContainer primary>
+                            <FeatureMobViewImageContainer height={"300px"}>
+                                <ImageContainer src={require("static/img/"+feature.mobViewImage+".png")}/>
+                            </FeatureMobViewImageContainer>
                             <FeatureItemImageContainer src={require("static/img/"+feature.mobImage+".png")} height="300"/>
                         </FeatureItemRightContainer>
 
-                    </FeatureItem>:
-                        <FeatureItem key={index} style={{position:'relative'}}>
-
-                            <FeatureItemRightContainer>
-                                <FeatureItemImageContainer src={require("static/img/"+feature.mobImage+".png")} height="300"/>
-                            </FeatureItemRightContainer>
-
-                            <Parallax offsetYMax={window.outerWidth>567?40:0} offsetYMin={window.outerWidth>567?-40:0} style={{width:'46%'}}>
-                                <FeatureItemLeftContainer>
-                                    <FeatureBackgroundImage src={require("static/img/"+feature.backgroundImage+".png")} alt="background"/>
-                                    <FeatureHeadingContainer>
-                                        <img src={require("static/img/"+feature.image+".png")} alt="feature-left"/>
-                                        {'  ' +feature.name}
-                                    </FeatureHeadingContainer>
-                                    <FeatureDescription>
-                                        Keep a track of your daily reading with smart logs and time tracking
-                                    </FeatureDescription>
-                                </FeatureItemLeftContainer>
-                            </Parallax>
-                        </FeatureItem>))}
+                    </FeatureItem>))}
                 </FeatureListContainer>
           </FeatureListParentContainer>
         )

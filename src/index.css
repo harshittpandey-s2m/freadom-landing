@@ -40,6 +40,16 @@ a {
      width:100%;overflow:hidden;     max-width:100%;
  }
 
-@media screen and (max-width:768px)
-{   .parallax-outer {width:100%;}
+@media screen and (max-width:767px)
+{   .parallax-outer {width:100%;
+    position:relative;
+max-height:260px;}
 }
+
+@media screen and (max-width:767px)
+{   .parallax-inner {
+    transform: translate3d(0%, 0%, 0px);
+}
+}
+
+
